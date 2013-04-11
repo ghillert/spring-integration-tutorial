@@ -25,6 +25,15 @@ Pipes and Filters at the core of Spring Integration’s architecture
 * Message
 
 ### What is in a Message?
+
+* Structure of a Message
+  - Headers
+  - Payload
+* Function of a Message
+  - Document Message
+  - Command Message
+  - Event Message
+
 ### What is a Channel?
 ### What is an Endpoint?
 
@@ -32,6 +41,7 @@ Pipes and Filters at the core of Spring Integration’s architecture
 
 #### Router
 #### Transformer
+...
 
 ## Why would I care?
 
@@ -76,7 +86,7 @@ User enters `String`, which will passed to the Gateway and the *Transformer* wil
 
 # The Channel Deep-Dive
 
-* Direct Channel 
+* Direct Channel (Single Thread)
 * Queue Channels
 
 # Pollers
@@ -87,8 +97,17 @@ Pollers are used in both inbound and outbound messaging scenarios. Here are some
 * Polling internal (pollable) Message Channels
 * Polling internal services (E.g. repeatedly execute methods on a Java class)
 
-## Integration with External Systems (Sample)
+# Integration with External Systems (Sample)
 
-...
+> This should probably be some more involved example using either the Twitter adapters or some other web-service to retrieve data (ideally retrieve data from multiple source) Aggregate them, process them and ultimately send them some place else (e.g. email)
+
+# Spring Batch
+
+## Overview
+
+### Integration Options between Spring Batch and Integration
+
+## The Sample
+
 
 
