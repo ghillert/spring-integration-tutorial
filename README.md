@@ -63,6 +63,8 @@ Spring Integration provides many components...
 
 
 
+# The Channel Deep-Dive
+
 
 
 
