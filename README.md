@@ -61,11 +61,34 @@ Spring Integration provides many components...
 
 # Build a first Spring Integration Application
 
+User enters `String`, which will passed to the Gateway and the *Transformer* will convert the String to upper-case and the upper-case String is returned to the user.
 
+1. Gateway
+2. Request Channel
+3. Transformer
+
+- Explain the Gateway
+- Explain Request Channel
+- Explain the Transformer
+- Explain that sometimes different component can accomplish the same task. Choose the component that fits functionally and semantically. E.g. instead of a Transformer you can use a *Service Activator*. 
+
+- Show a very explicit sample first, e.g. with channels defined. Explained which elements are created implicitly. 
 
 # The Channel Deep-Dive
 
+* Direct Channel 
+* Queue Channels
 
+# Pollers
 
+Pollers are used in both inbound and outbound messaging scenarios. Here are some use-cases that illustrate the scenarios in which Pollers are used:
+
+* Polling certain external systems such as FTP Servers, Databases, Web Services
+* Polling internal (pollable) Message Channels
+* Polling internal services (E.g. repeatedly execute methods on a Java class)
+
+## Integration with External Systems (Sample)
+
+...
 
 
