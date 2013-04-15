@@ -1,7 +1,32 @@
 The Spring Integration Tutorial
 ===============================
 
-# Introduction
+# Tutorial Structure / Ideas
+
+There are numreous ways we can develop a tutorial for Spring Integration and Batch. I think the tutorial should be a continuation of the [Spring MVC Sample] (https://github.com/joshlong/the-spring-tutorial).
+
+Basically, we have a **Customer Relationship Manager** (CRM) application that will be extended to provide the following 2 use-cases:
+
+1. When users/customers are added, retrieve additional data from an external systems (using *Spring Integration*), e.g.:
+  - Convert (geocode) address information into Latitude/Longitude coordinates using WS/REST calls
+  - Calculate periodically or upon event (e.g. user added) agregate data point, e.g. how many customer are in the same Zip/Postal Code. Trigger (Email) notifications, once certain thresholds are exceeded - e.g. more than 5 customers exist in the same ZIP/Postal  Code
+  - Do a periodic data export and transfer the data via SFTP to a remote server
+2. Provide a bulk-data import feature (utilizing Spring Batch). E.g. a CSV file, containing customer information is droped into a directory and we must pick it up, process and import the data. 
+
+It looks like we could utilize [http://beta.generatedata.com/](http://beta.generatedata.com/) to generate interesting sets of sample data. 
+
+3. As an adavanced chapter, we could demonstrate how to modularize portions of the application, e.g. using RabbitMQ
+  - Take a look at Mark Fishers Spring One demo: https://github.com/markfisher/springone-wgrus/tree/master/modular
+
+To outline some of the contents, I have been using my [2012 SpringOne presentation](http://www.slideshare.net/hillert/introduction-to-spring-integration-and-spring-batch).
+
+# Overview of the Tutorial
+
+Over the course of this tutorial, you will learn how to use *Spring Integration*. We will show how to use *Spring Integration* to connect and integrate with external systems but we will also show how you can use *Spring Integration* as an **Intra Application Framwork** in order to improve maintainability and scalaiblity.
+
+Furthermore, we will implement a use-case to handle large files using *Spring Batch*.
+
+# Introduction to Spring Integration
 
 * Light-weight messaging framework
 * Provides an adapter-based platform
@@ -14,9 +39,6 @@ The Spring Integration Tutorial
 4. Transmit
 
 ## Enterprise Integration Patterns
-
-Using Spring Integration as an Intra Application Framwork
-Handle Large Files Using Spring Batch
 
 Pipes and Filters at the core of Spring Integration’s architecture
 
@@ -101,13 +123,23 @@ Pollers are used in both inbound and outbound messaging scenarios. Here are some
 
 > This should probably be some more involved example using either the Twitter adapters or some other web-service to retrieve data (ideally retrieve data from multiple source) Aggregate them, process them and ultimately send them some place else (e.g. email)
 
+# Modularizing the CRM Application
+
+TBD
+
 # Spring Batch
 
 ## Overview
 
+TBD
+
 ### Integration Options between Spring Batch and Integration
 
+Illustrate functionality provided by the Spring Batch Integration module: https://github.com/SpringSource/spring-batch-admin/tree/master/spring-batch-integration
+
 ## The Sample
+
+* Add flat-file import capabilities to the CRM application.
 
 
 
